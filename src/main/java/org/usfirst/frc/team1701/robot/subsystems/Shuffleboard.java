@@ -32,7 +32,6 @@ public class Shuffleboard {
         autonomousLocation.addDefault("Middle",2);
         autonomousLocation.addObject("Right-Switch",5);
         autonomousLocation.addObject("Right",3);
-        autonomousLocation.addObject("Magic",6);
         SmartDashboard.putData("Autonomous Location", autonomousLocation);
         /*
          * Initialize Autonomous Chooser
