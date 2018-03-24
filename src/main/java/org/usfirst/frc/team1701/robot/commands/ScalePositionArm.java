@@ -34,9 +34,9 @@ public class ScalePositionArm extends Command {
         }
     }
     private void grabWrist() {
-        if(Robot.liftArm.getWristAngle() > Robot.position.wristScale + 50) {
+        if(Robot.liftArm.getWristAngle() > Robot.position.wristScale + 15) {
             Robot.liftArm.setWrist(0.50);
-        } else if(Robot.liftArm.getWristAngle() < Robot.position.wristScale - 50) {
+        } else if(Robot.liftArm.getWristAngle() < Robot.position.wristScale - 15) {
             Robot.liftArm.setWrist(-0.50);
         } else {
             Robot.liftArm.stopWrist();

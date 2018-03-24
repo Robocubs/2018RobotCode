@@ -34,6 +34,7 @@ public class RobotMap {
   public static DoubleSolenoid winchBrake;
   public static DoubleSolenoid wristBrake;
   public static AnalogInput liftArmEncoder;
+  public static AnalogInput wristEncoder;
   public static DigitalInput cubeSensor;
   public static DigitalInput armSensor;
   public static AHRS _navx;
@@ -57,6 +58,7 @@ public class RobotMap {
      * Initialize all analog and digital objects
      */
     liftArmEncoder = new AnalogInput(0);
+    wristEncoder = new AnalogInput(1);
     cubeSensor = new DigitalInput(0);
     armSensor = new DigitalInput(1);
 

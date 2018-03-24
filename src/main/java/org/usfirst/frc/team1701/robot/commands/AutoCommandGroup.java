@@ -51,7 +51,7 @@ public class AutoCommandGroup extends CommandGroup {
                 case 'L':
                     Robot.driveTrain.setAutoGear(false);
                     Robot.driveTrain.setLowGear();
-                    addSequential(new Drive(19,0.82));
+                    addSequential(new Drive(20,0.82));
                     addSequential(new Turn(135));
                     addSequential(new ScalePosition());
                     addSequential(new ReleaseAndPunch());
@@ -67,14 +67,14 @@ public class AutoCommandGroup extends CommandGroup {
                     addSequential(new SwitchPosition());
                     addSequential(new Drive(1,0.8));
                     addSequential(new Turn(29));
-                    addSequential(new Drive(9,.7));
+                    addSequential(new Drive(7,.9));
                     addSequential(new ReleaseAndPunch());
                     break;
                 case 'R':
                     addSequential(new SwitchPosition());
                     addSequential(new Drive(1,0.8));
                     addSequential(new Turn(-27));
-                    addSequential(new Drive(9,.7));
+                    addSequential(new Drive(7,.9));
                     addSequential(new ReleaseAndPunch());
 
                     break;
@@ -88,7 +88,7 @@ public class AutoCommandGroup extends CommandGroup {
                 case 'R':
                     Robot.driveTrain.setAutoGear(false);
                     Robot.driveTrain.setLowGear();
-                    addSequential(new Drive(19,0.82));
+                    addSequential(new Drive(20,0.82));
                     addSequential(new Turn(-135));
                     addSequential(new ScalePosition());
                     addSequential(new ReleaseAndPunch());

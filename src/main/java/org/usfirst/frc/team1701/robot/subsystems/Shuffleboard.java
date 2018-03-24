@@ -51,6 +51,7 @@ public class Shuffleboard {
         SmartDashboard.putBoolean("Arm Trigger", false);
         SmartDashboard.putNumber("Drive Train", 0);
         SmartDashboard.putString("GameCode", "");
+        SmartDashboard.putNumber("NewEnc",0);
 
     }
 
@@ -63,6 +64,7 @@ public class Shuffleboard {
         SmartDashboard.putNumber("Wrist", Robot.liftArm.getWristAngle());
         SmartDashboard.putBoolean("Arm Trigger", RobotMap.armSensor.get());
         SmartDashboard.putNumber("Drive Train", Robot.driveTrain.getRightDistance());
+        SmartDashboard.putNumber("NewEnc",RobotMap.wristEncoder.getValue());
 
     }
 

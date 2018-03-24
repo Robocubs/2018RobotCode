@@ -1,6 +1,7 @@
 package org.usfirst.frc.team1701.robot.commands.Auto;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team1701.robot.Robot;
 
 public class Drive extends Command {
@@ -27,11 +28,13 @@ public class Drive extends Command {
     }
     protected void execute() {
 
-        if(setHighGear) {
+        if(!setHighGear) {
             Robot.driveTrain.setLowGear();
         } else {
             Robot.driveTrain.setHighGear();
         }
+
+        SmartDashboard.putNumber("Drive Train", Robot.driveTrain.getRightDistance());
 
         if(Robot.driveTrain.getRightDistance() < distance) {
             Robot.driveTrain.driveSpeed = -currentSpeed;

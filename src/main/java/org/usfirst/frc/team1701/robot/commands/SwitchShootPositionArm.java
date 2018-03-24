@@ -19,22 +19,11 @@ public class SwitchShootPositionArm extends Command {
 
     private boolean isFinished;
 
-    private void stowWrist() {
 
-        Robot.liftArm.setGrabber(true);
-
-        if(Robot.liftArm.getWristAngle() > Robot.position.wristStow + 50) {
-            Robot.liftArm.setWrist(0.50);
-        } else if(Robot.liftArm.getWristAngle() < Robot.position.wristStow - 50) {
-            Robot.liftArm.setWrist(-0.50);
-        } else {
-            Robot.liftArm.stopWrist();
-        }
-    }
     private void grabWrist() {
-        if(Robot.liftArm.getWristAngle() > Robot.position.wristSwitchShoot + 50) {
+        if(Robot.liftArm.getWristAngle() > Robot.position.wristSwitchShoot + 15) {
             Robot.liftArm.setWrist(0.50);
-        } else if(Robot.liftArm.getWristAngle() < Robot.position.wristSwitchShoot - 50) {
+        } else if(Robot.liftArm.getWristAngle() < Robot.position.wristSwitchShoot - 15) {
             Robot.liftArm.setWrist(-0.50);
         } else {
             Robot.liftArm.stopWrist();
@@ -51,10 +40,8 @@ public class SwitchShootPositionArm extends Command {
 
         if(Robot.liftArm.getArmAngle()> Robot.position.armSwitchShoot + 40) {
             Robot.liftArm.setLiftArm(RobotMap.armSpeed);
-            stowWrist();
         } else if(Robot.liftArm.getArmAngle()< Robot.position.armSwitchShoot - 40) {
             Robot.liftArm.setLiftArm(-RobotMap.armSpeed);
-            stowWrist();
         } else {
             Robot.liftArm.stopLiftArm();
             grabWrist();

@@ -83,7 +83,8 @@ public class LiftArm extends Subsystem {
    * @return wrist angle as double.
    */
   public double getWristAngle() {
-    return wristEncoder.getSelectedSensorPosition(encPidIdx);
+    //return wristEncoder.getSelectedSensorPosition(encPidIdx);
+    return RobotMap.wristEncoder.getValue();
   }
   /**
    * Set the clamp position.
