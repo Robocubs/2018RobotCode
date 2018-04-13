@@ -121,8 +121,6 @@ public class AutoCommandGroup extends CommandGroup {
                     addSequential(new ReleaseCube());
                     break;
             }
-        } else if (autoLocation == 6) {
-            addSequential(new Turn(-90));
         }
     }
 }
