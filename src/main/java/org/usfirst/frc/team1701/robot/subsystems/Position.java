@@ -7,8 +7,8 @@ public class Position extends Subsystem {
     /*
      * Wrist values for positions
      */
-    public double wristStow = -44;
-    public double wristGrab = 1980;
+    public double wristStow = 1850;
+    public double wristGrab = 1988;
     public double wristScale = 1958;
     public double wristClimb = 2007;
     public double wristSwitch = 1723;

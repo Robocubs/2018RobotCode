@@ -35,11 +35,11 @@ public class GrabPositionArm extends Command {
         else {
             Robot.liftArm.stopLiftArm();
             Robot.liftArm.disableWristBrake();
-            if(Robot.liftArm.getWristAngle() > Robot.position.wristGrab + 15)
+            if(Robot.liftArm.getWristAngle() > Robot.position.wristGrab + 3)
             {
                 Robot.liftArm.setWrist(0.50);
             }
-            else if(Robot.liftArm.getWristAngle() < Robot.position.wristGrab - 15)
+            else if(Robot.liftArm.getWristAngle() < Robot.position.wristGrab - 3)
             {
                 Robot.liftArm.setWrist(-0.50);
             }
